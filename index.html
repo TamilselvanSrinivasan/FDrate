@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+         <h1>FD rate</h1>
+            <div class="inputdiv">
+                <input type="text" id="input" placeholder="months"> </input>
+            </div>&nbsp;
+        <div>
+            <button type="submit" onclick="fd()">convert</button>
+        </div>
+        <div id="result">
+
+        </div>
+       
+    </div>
+    <script>
+        function fd()
+        {
+            //console.log(input.value)
+        let months=Number(document.getElementById("input").value)
+        let percent
+        if(months<3)
+         percent=5.8
+        else if(months>=3&&months<=6)
+         percent=6.5
+        else if(months>=7&&months<=9)
+          percent=6.8
+        else
+         percent=7
+       let result=document.getElementById("result")
+        result.innerHTML=percent+"%"
+        }
+        
+    </script>
+</body>
+</html>
